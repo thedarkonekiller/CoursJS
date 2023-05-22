@@ -73,10 +73,10 @@
     
 // }
 
-for (let i = 0; i < 11; i++) {
-    for (let f = 0; f < 11; f++) {
-        let result = i*f
-        console.log(i + " x " + f + " = " + result);
+for (let facteur1 = 0; facteur1 < 11; facteur1++) {
+    for (let facteur2 = 0; facteur2 < 11; facteur2++) {
+        let produit = facteur1*facteur2
+        console.log(facteur1 + " x " + facteur2 + " = " + produit);
     }
     
 }
