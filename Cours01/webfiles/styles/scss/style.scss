@@ -1,0 +1,22 @@
+$primaryColor: black; 
+$secondaryColor: tomato;
+$thirstColor: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    h1 {
+        color: $primaryColor;
+    }
+    p{
+        background: $primaryColor;
+        color: $thirstColor;
+        &.active {
+            background: $thirstColor;
+            color: $primaryColor;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body h1 {
+  color: black;
+}
+body p {
+  background: black;
+  color: white;
+}
+body p.active {
+  background: white;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
