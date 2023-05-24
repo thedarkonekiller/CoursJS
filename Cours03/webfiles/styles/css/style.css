@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+body header nav {
+  justify-content: space-between;
+}
+body header nav ul {
+  list-style: none;
+  margin-right: 2rem;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.75rem 0.625rem;
+}
+body main h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+body main section {
+  width: 50%;
+  margin: 1rem auto;
+}
+body main form {
+  width: 50%;
+  margin: 1.25rem auto;
+}
+body main form input {
+  margin: 0 auto;
+}
+body footer {
+  width: 50%;
+  margin: 2rem auto;
+}
+body footer section {
+  width: 50%;
+}
+body footer section h3 {
+  text-decoration: underline;
+}
+body footer section ul {
+  list-style: none;
+}
+body footer section ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.75rem 0.625rem;
+}
+body .flex {
+  display: flex;
+}
+body .flex-col {
+  flex-direction: column;
+}
+body .is-valid {
+  color: lime;
+}
+body .error {
+  color: tomato;
+}
+body .rotate {
+  animation: rotate 3s 0s infinite linear;
+}
+body .pulse {
+  animation: pulse 1s 0s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
