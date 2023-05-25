@@ -14,6 +14,17 @@
 //     console.log(h2.textContent)
 // })
 
+// Au click sur un bouton afficher une alerte avec le texte du bouton
+// let buttons = document.querySelectorAll("button")
+// buttons.forEach(button => {
+//     button.addEventListener("click", () => {
+//         alert(button.textContent)
+//     })
+// })
+
+
+
+// Gestion de l'image (Agrandissement/Rétrécissement)
 let img = document.querySelector("img")
 let buttonMb = document.querySelector(".makeBigger")
 
@@ -28,6 +39,7 @@ function bigger(){
     }
 }
 
+// Gestion du DarkMode
 let darkMode = document.querySelector(".darkmode")
 let bdy = document.querySelector("body")
 
@@ -43,14 +55,7 @@ function toggleDarkMode(){
     }
 }
 
-// let buttons = document.querySelectorAll("button")
-// buttons.forEach(button => {
-//     button.addEventListener("click", () => {
-//         alert(button.textContent)
-//     })
-// })
-
-
+// Code pour afficher le texte caché
 let shwMore = document.querySelector(".showMore")
 let linkShmore = document.querySelector(".loadMore")
 linkShmore.addEventListener("click", () => {
@@ -62,17 +67,33 @@ linkShmore.addEventListener("click", () => {
         linkShmore.textContent = "Afficher +"
     }
 })
+
+// Code pour afficher le texte saisie dans l'input lorsque l'on clique sur le bouton
 let text = document.querySelector("#seText")
 let dspOnPage = document.querySelector("#displayOnPage")
 let result = document.querySelector("#result")
-console.log(text)
+
 dspOnPage.addEventListener("click", () => {
     if (text.value != "") {
-        result.innerHTML = text.value
+        if(document.querySelector("#resultP")){
+            let parag = document.querySelector("#resultP")
+            parag.innerHTML = text.value
+            text.value = ""
+        } else {
+            let parag = document.createElement("p")
+            parag.id = "resultP"
+            result.appendChild(parag)
+            parag.innerHTML = text.value
+            text.value = ""
+        }
     } else {
         alert("Veuillez entrer un texte !")
     }
 })
+
+
+
+// Code pour le tableau en bas de page
 
 // On séléctionne toutes les cellules
 let allCells = document.querySelectorAll("td");
