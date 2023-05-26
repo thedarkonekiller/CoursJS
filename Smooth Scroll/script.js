@@ -2,7 +2,6 @@
 // créez un bouton de retour haut de page rapide.
 
 // Veillez à exploiter du JavaScript et non du CSS !
-
 window.addEventListener("scroll", showScrollBtn)
 
 function showScrollBtn() {
@@ -14,7 +13,9 @@ function showScrollBtn() {
             scrollBtn.className = "fa-solid fa-angles-up fa-bounce"
             scrollBtn.id = "backToTopContainer"
             document.body.appendChild(scrollBtn)
-            scrollBtn.addEventListener("click", ReturnTop)            
+            scrollBtn.addEventListener("click", ReturnTop)
+            // document.body.innerHTML += '<i class="fa-solid fa-angles-up fa-bounce" id="backToTopContainer"></i>'
+
         }  
     } else {
       let scrollBtn = document.querySelector("#backToTopContainer")
