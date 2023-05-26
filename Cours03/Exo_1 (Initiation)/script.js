@@ -142,3 +142,9 @@ function colorToggle() {
         }
     }
 }
+
+
+// On récupére la position par rapport au haut de la fenetre et on l'affiche dans la console
+// window.addEventListener("scroll", (e) => {
+//     console.log(this.scrollY)
+// })
