@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    h1 {
+        text-align: center;
+    }
+    &>p {
+        text-align: center;
+        font-weight: 600;
+    }
+    section {
+        width: 80%;
+        margin: 2rem auto;
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+    #circle-container {
+        position: fixed;
+        top: 0;
+        right: 5px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        & .circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 50%;
+            &.active {
+                background: #000;
+            }
+        }
+    }
+}

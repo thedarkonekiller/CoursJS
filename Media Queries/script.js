@@ -37,7 +37,7 @@
 
 
 
-const media1040 = window.matchMedia("(min-width: 1040px)");
+const media1024 = window.matchMedia("(min-width: 1024px)");
 const nav = document.querySelector("#nav");
 let menu = document.querySelector("#menu");
 let iconBmenu = document.querySelector("#iconBmenu");
@@ -74,7 +74,7 @@ function createBMenu() {
 
 // Fonction pour gérer le redimensionnement de la fenêtre
 function handleResize() {
-  if (media1040.matches) {
+  if (media1024.matches) {
     menu.id = "menu"; // Rétablissement de l'ID "menu" si la condition de correspondance est satisfaite
 
     if (iconBmenu) {
@@ -97,4 +97,3 @@ window.addEventListener("resize", handleResize);
 
 // Appel initial de la fonction handleResize pour gérer l'état initial du menu en fonction de la taille de la fenêtre
 handleResize();
-
