@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Calibri, Verdana, Geneva, Tahoma, sans-serif;
+}
+body header {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+body header nav {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+body header nav img {
+  width: 75px;
+  height: 75px;
+  margin-left: 2.25rem;
+}
+body header nav ul {
+  list-style: none;
+  display: flex;
+}
+body header nav ul li {
+  display: flex;
+}
+body header nav ul li a {
+  text-decoration: none;
+  padding: 2.25rem;
+  color: #5F5F5F;
+}
+body header nav ul#bMenu {
+  display: none;
+}
+body header nav ul#bMenu.check {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 94px;
+  background: #ECECEC;
+  width: 100%;
+  align-items: center;
+}
+body header nav div#iconBmenu {
+  height: 1.25rem;
+  width: 2.25rem;
+  margin: 2.25rem 0;
+  margin-right: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: transparent;
+  border-radius: 0.25em;
+}
+body header nav div#iconBmenu span.line {
+  background-color: black;
+  border-radius: 1em;
+  width: 2.25rem;
+  height: 0.1875rem;
+}
+body header nav div#iconBmenu span.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 100ms ease-in-out;
+}
+body header nav div#iconBmenu span.line1.check {
+  width: 2rem;
+  height: 0.1875rem;
+  display: block;
+  transform: rotate(45deg) translatex(-12.5%);
+}
+body header nav div#iconBmenu span.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 100ms ease-in-out;
+}
+body header nav div#iconBmenu span.line3.check {
+  width: 2rem;
+  height: 0.1875rem;
+  display: block;
+  transform: rotate(-45deg) translatex(-20.5%);
+}
+body header nav div#iconBmenu span.line2.check {
+  opacity: 0;
+}
+body main h1 {
+  text-align: center;
+  margin: 4.5rem auto 3.5rem;
+  font-weight: 400;
+  font-size: 3.375rem;
+  line-height: 4.125rem;
+  letter-spacing: 5%;
+}
+body main div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.25rem;
+  padding: 0.625rem;
+}
+@media screen and (max-width: 1440px) {
+  body main div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body main div article {
+  max-width: 445px;
+  padding: 0.625rem;
+  gap: 2.25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+body main div article .images {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body main div article .images img {
+  width: 424px;
+  height: 424px;
+}
+body main div article .images .loupe {
+  width: 48px;
+  height: 48px;
+  justify-self: baseline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+body main div article h2 {
+  text-transform: uppercase;
+  margin: 2.25rem 0;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: 5%;
+  color: #000000;
+}
+body main div article p {
+  font-weight: 400;
+  size: 1.125rem;
+  line-height: 1.375rem;
+  letter-spacing: 5%;
+  color: #000000;
+}
+body .modalBg {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  overflow: auto;
+}
+body .modalBg .modalContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+body .modalBg .modalContent img {
+  height: 770px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
