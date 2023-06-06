@@ -1,23 +1,110 @@
 let loupes = document.querySelectorAll(".loupe")
+let firstLoupe = loupes.item(0)
+let lastLoupe = loupes.item(Number(loupes.length - 1))
+let currentloupe = null
 
 loupes.forEach(loupe => {
     loupe.addEventListener("click", () => {
         let modalBg = document.createElement("div")
+        let modalNavLeft = document.createElement("span")
+        let modalNavRight = document.createElement("span")
         let modalContent = document.createElement("div")
         let image = document.createElement("img")
+        let author = document.createElement("p")
+        let price = document.createElement("p")
+        let availablity = document.createElement("p")
         let closeBtn = document.createElement("span")
         modalBg.classList.add("modalBg")
+        modalNavLeft.classList.add("modalNav", "modalNavLeft")
+        modalNavLeft.textContent = "<"
+        modalNavRight.classList.add("modalNav", "modalNavRight")
+        modalNavRight.textContent = ">"
         modalContent.classList.add("modalContent")
         let imageRef = loupe.previousElementSibling
         image.src = imageRef.src
+        let h2 = loupe.parentNode.nextSibling.nextSibling
+        author.textContent = h2.dataset.author
+        price.textContent = h2.dataset.price
+        availablity.textContent = h2.dataset.availablity
+        closeBtn.classList.add("closeBtn")
+        closeBtn.textContent = "X"
         document.body.appendChild(modalBg)
         modalBg.appendChild(modalContent)
-        modalContent.append(image, closeBtn)
+        if (loupe == firstLoupe) {
+          modalContent.appendChild(modalNavRight)
+        } else {
+          if (loupe == lastLoupe) {
+            modalContent.appendChild(modalNavLeft)
+          } else {
+            modalContent.append(modalNavLeft, modalNavRight)
+          }
+        }
+        modalNavLeft.addEventListener('click', () => {
+          currentloupe = loupe
+          let previousloupe = loupe.parentElement.parentElement.previousElementSibling.previousElementSibling
+          console.log(previousloupe)
+          if (previousloupe !== null) {
+            let imageRef = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling
+            image.src = imageRef.src
+            let h2 = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling
+            author.textContent = h2.dataset.author
+            price.textContent = h2.dataset.price
+            availablity.textContent = h2.dataset.availablity
+            modalContent.append(image, author, price, availablity, modalNavRight)
+            loupe = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling.nextSibling 
+          } else {
+            modalNavLeft.remove()
+            let imageRef = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling
+            image.src = imageRef.src
+            let h2 = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.nextSibling.nextSibling
+            author.textContent = h2.dataset.author
+            price.textContent = h2.dataset.price
+            availablity.textContent = h2.dataset.availablity
+            modalContent.append(image, author, price, availablity)
+            loupe = loupe.parentElement.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.nextSibling.nextSibling 
+          }
+        })
+        modalNavRight.addEventListener('click', () => {
+          currentloupe = loupe
+          let nextloupe = loupe.parentElement.parentElement.nextElementSibling.nextElementSibling
+          console.log(nextloupe)
+          if (nextloupe !== null) {
+          let imageRef = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling
+          image.src = imageRef.src
+          let h2 = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling
+          console.log(h2)
+          author.textContent = h2.dataset.author
+          price.textContent = h2.dataset.price
+          availablity.textContent = h2.dataset.availablity
+          modalContent.append(image, author, price, availablity, modalNavLeft)
+          loupe = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling.nextSibling
+          } else {
+            modalNavRight.remove()
+            let imageRef = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling
+            image.src = imageRef.src
+            let h2 = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling
+            console.log(h2)
+            author.textContent = h2.dataset.author
+            price.textContent = h2.dataset.price
+            availablity.textContent = h2.dataset.availablity
+            modalContent.append(image, author, price, availablity)
+            loupe = loupe.parentElement.parentElement.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling.nextSibling
+          }
+
+        })
+        modalContent.append(image, author,price, availablity, closeBtn)
+
         if (document.querySelector(".modalBg") != null) {
-            modalBg.addEventListener("click", () => {
+            closeBtn.addEventListener("click", () => {
                 modalBg.remove()
             })
         }
+
+        // if (document.querySelector(".modalBg") != null) {
+        //     modalBg.addEventListener("click", () => {
+        //         modalBg.remove()
+        //     })
+        // }
         })
 })
 
