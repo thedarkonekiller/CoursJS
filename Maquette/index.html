@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./webfiles/styles/css/style.css">
+    <link rel="stylesheet" href="./webfiles/js/aos-master/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./webfiles/js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +25,28 @@
     </header>
     <main>
         <h1>Nos produits :</h1>
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <img src="./src/images/Illustration1.png" alt="">
+                      </li>
+                      <li class="splide__slide">
+                          <img src="./src/images/Illustration2.png" alt="">
+                      </li>
+                      <li class="splide__slide">
+                          <img src="./src/images/Illustration3.png" alt="">
+                      </li>
+                  </ul>
+                  <button class="splide__toggle" type="button">
+                      <span class="splide__toggle__play">Play</span>
+                      <span class="splide__toggle__pause">Pause</span>
+                  </button>
+            </div>
+          </section>
         <div>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration1.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="first" class="loupe">
                 </div>
@@ -32,7 +54,7 @@
                 <p>Vous saviez que Jeanne de Flandre a été une femme particulièrement badass ? Qu’on brûlait les sorcières à Templeuve ? Qu’il existe un Roubaix dans le Dakota du Sud...</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration2.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -41,7 +63,7 @@
                     Afin de véritablement entrer en relation avec un tableau, les tout-petits doivent pouvoir associer leur propre expérience à ce qui y est exprimé.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration3.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -49,7 +71,7 @@
                 <p>Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, une école de sorcellerie !</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration4.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -58,7 +80,7 @@
                     Les relations amicales figurent parmi les plus importantes que nous entretenons.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration5.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -66,7 +88,7 @@
                 <p>Livre illustré à propos de la ville Palm Beach. L’auteur nous emmène dans les lieux les plus iconiques de Palm Beach, en Floride.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration6.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -74,7 +96,7 @@
                 <p>Considéré comme la ville la plus dynamique et sexy du pays, Miami est plus populaire que jamais. Pourtant, c'est une ville qui ne change pas mais qui évolue constamment, sans jamais réécrire le passé, ne faisant que développer son illustre héritage.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration7.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -82,7 +104,7 @@
                 <p>Dans ce volume découvrez l'étendue infinie d'eaux chatoyantes associée à une hospitalité grecque inégalée. Chaque île abrite un esprit et une mythologie uniques. De Patmos à Hydra, les îles sont imprégnées d'un sens séduisant de l'histoire, de la tradition et de l'aventure.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration8.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="" class="loupe">
                 </div>
@@ -90,7 +112,7 @@
                 <p>Ces deux livres offrent au lecteur un maximum d'informations sur les frameworks Node.js et AngularJS pour maîtriser le développement en JavaScript aussi bien côté serveur que côté client. 597 pages par nos experts.</p>
             </article>
             <article>
-                <div class="images">
+                <div class="images" data-aos="flip-left">
                     <img src="./src/images/Illustration9.png" alt="">
                     <img src="./src/images/Vector_loupe.png" alt="last" class="loupe">
                 </div>
@@ -103,5 +125,12 @@
     <footer>
         <p>Intégré par Florian CHARPENTIER</p>
     </footer>
+    <script src="./webfiles/js/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        new Splide( '#image-carousel' ).mount();
+      </script>
 </body>
 </html>
