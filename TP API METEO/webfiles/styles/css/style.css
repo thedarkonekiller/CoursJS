@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+body header {
+  background: linear-gradient(to bottom, #F0F0F0, #F4F4F4);
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+body header nav h1 {
+  font-size: 2.25rem;
+  color: #727272;
+}
+body header nav h1 span {
+  color: #1A84CE;
+}
+body header nav input {
+  max-width: 400px;
+  height: 53px;
+  margin: 2rem;
+}
+body main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+body main h2 {
+  font-size: 3.375rem;
+  color: black;
+  text-align: center;
+}
+body main p {
+  font-size: 2.25rem;
+  color: #727272;
+}
+body main div:first-of-type {
+  width: 100%;
+  display: flex;
+  background: linear-gradient(to bottom, rgba(0, 118, 201, 0.9), rgba(28, 155, 212, 0.9));
+  justify-content: center;
+  align-items: center;
+}
+body main div:first-of-type p {
+  font-size: 3.375rem;
+  color: white;
+  width: 33%;
+  font-weight: 700;
+  text-align: center;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: radial-gradient(white, rgb(44, 156, 213));
+  margin: 5rem;
+}
+body main div:first-of-type p:first-of-type {
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+body main div:first-of-type p:last-of-type {
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+}
+body main div:first-of-type img {
+  width: 33%;
+  max-width: 235px;
+  max-height: 188px;
+  margin: 5rem;
+}
+body main div:last-of-type {
+  display: flex;
+}
+body main div:last-of-type figure {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main div:last-of-type figure img {
+  margin: 0 auto;
+}
+body main div:last-of-type figure figcaption {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

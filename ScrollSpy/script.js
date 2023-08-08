@@ -6,7 +6,7 @@ window.onload = () => {
     let observer = new IntersectionObserver(observables => {
         for (let observable of observables) {
             if (observable.intersectionRatio > 0.5) {
-                // Si l'élément intersecte plus de 50% du viewport, active le cercle correspondant
+                // Si l'élément intersecte plus de 50% du viewport, on active le cercle correspondant
                 let circles = document.querySelectorAll("#circle-container .circle"); // Sélectionne tous les éléments avec la classe "circle" dans "circle-container"
                 
                 // Supprime la classe "active" de tous les cercles
